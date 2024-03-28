@@ -3,7 +3,7 @@ import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 
 const SuccessfulScreen = ({ navigation }) => {
   useEffect(() => {
-    // Simulate some processing time
+    
     setTimeout(() => {
       // Navigate to the next screen after a delay
       navigation.navigate('NextScreen');

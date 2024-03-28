@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Signup from "./screens/Signup";
 import Signin from './screens/Signin';
 import VerificationScreen from './screens/authentication';
-import loading from "./screens/Welcome";
+import loading from "./screens/Loading";
 
 export default function App() {
   return (
