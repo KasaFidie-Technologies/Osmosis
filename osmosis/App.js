@@ -3,17 +3,18 @@ import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import QuizGame from './src/components/QuizGame';
-import Login from './src/components/Login';
-
+import SignUp from './src/components/SignUp';
+import Signin from './src/components/Signin';
+import VerificationScreen from "./src/components/VerificationScreen";
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="QuizGame" component={QuizGame} />
-        <Stack.Screen name="Login" component={Login} />
+      <Stack.Navigator initialRouteName="Signin">
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Signin" component={Signin} />
+        <Stack.Screen name="VerificationScreen" component={VerificationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
