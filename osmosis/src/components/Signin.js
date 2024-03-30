@@ -3,12 +3,15 @@ import {
   View,
   Text,
   Alert,
+  Image,
   TextInput,
   TouchableOpacity,
   StyleSheet,
   SafeAreaView,
+
 } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SignUpstyles from './styles/appStyles/SignUpstyles';
 
 const Signin = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -16,8 +19,7 @@ const Signin = ({navigation}) => {
 
   const handleLogin = () => {
 
-  
-    // Implement your login logic here, e.g., using an API call
+
     // If successful, navigate to the appropriate screen
     if ( !email || !password) {
         Alert.alert('Error', 'Please fill in all fields');
@@ -32,6 +34,8 @@ const Signin = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+
+
       <View style={styles.header}>
         <Text style={styles.title}>Log in</Text>
         <Text style={styles.subtitle}>Welcome back</Text>
@@ -62,25 +66,52 @@ const Signin = ({navigation}) => {
       </View>
      
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Or continue with</Text>
-        <View style={styles.socialButtons}>
-          <TouchableOpacity style={styles.socialButton}>
-            <Text style={styles.socialButtonText}>G</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.socialButton}>
-            <Text style={styles.socialButtonText}>f</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.socialButton}>
-            <Text style={styles.socialButtonText}></Text>
-          </TouchableOpacity>
-        </View>
+         <View style= {{flexDirection: "row", alignItems: "center", marginVertical: 20}}> 
+              <View
+                  style= {{
+                    flex: 1,
+                    height: 1,
+                    backgroundColor: "#CBCBCB",
+                    marginHorizontal: 10,
+                  }}/>
+               <Text style={styles.footerText}>Or continue with</Text>
+
+               <View
+                  style= {{
+                    flex: 1,
+                    height: 1,
+                    backgroundColor: "#CBCBCB",
+                    marginHorizontal: 10,
+                  }}/>
+                
+          </View>
+          
+          <View style={styles.socialButtons}>
+            <TouchableOpacity style={styles.socialButton}>
+              <Image
+                source={require("../../assets/Google.png")}
+                style={styles.socialButtonG}/>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.socialButton}>
+              <Image 
+                  source={require("../../assets/Facebook.png")}
+                style={styles.socialButtonF}/>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.socialButton}>
+            <Image 
+              source={require("../../assets/LinkedIn.png")}
+              style={styles.socialButtonL}/>
+            </TouchableOpacity>
+          </View>
+            <TouchableOpacity  onPress={Signin}> 
+                  <Text style= {styles.formfooter}>Don't have an account?{" "} 
+                      <Text style= {styles.link} onPress={() => navigation.navigate('SignUp')}>Sign up</Text>
+                  </Text>     
+            </TouchableOpacity>
+
       </View>
 
-      <TouchableOpacity style={{marginTop: "auto"}} onPress={Signin}>  
-                <Text style= {styles.formfooter}>Don't have an account?{" "} 
-                <Text style= {{textdecorationline: "undeline"}}>Sign up</Text>
-                </Text>     
-      </TouchableOpacity>
+      
 
 
 
@@ -93,29 +124,40 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 20,
-    //position: "absolute",
-    //alignContent: "center",
+  
   },
   header: {
     marginBottom: 30,
   },
   title: {
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: 'bold',
+    color: "#CBCBCB",
+    alignSelf: "center",
+    marginBottom: 20,
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#666',
-    marginTop: 60,
+  
+   marginBottom: 80,
+    fontWeight: "bold",
+    alignSelf: "center",
+
+  },
+  link: {
+    color: "#007bff",
+
 
   },
   form: {
     flex: 1,
   },
   input: {
-    height: 40,
+    height: 50,
     borderColor: '#ccc',
-    borderWidth: 1,
+    borderWidth: 2,
+    borderRadius: 10,
     padding: 10,
     marginBottom: 15,
   },
@@ -127,45 +169,60 @@ const styles = StyleSheet.create({
     color: '#007bff',
   },
   button: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#1C0674',
     padding: 10,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 10,
+    height: 50,
   },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
+    alignSelf: "center",
+  
   },
-  footer: {
-    marginBottom: 30,
+ footer: {
+    marginBottom: 68,
     alignItems: 'center',
-    position: "relative",
+    position: "absolute",
+    marginTop: 460,
+    marginLeft: 63,
   },
+
   footerText: {
     color: '#666',
-    marginBottom: 5,
   },
   formfooter: {
-    marginBottom: 100,
     alignItems: 'center',
+    alignSelf: "center"
+  
+  
 
 
   },
   socialButtons: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 10,
+    marginTop: -9,
   },
   socialButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  socialButtonText: {
-    color: '#fff',
+  socialButtonG: {
+    height: 30,
+    width: 30,
+
+  },
+  socialButtonF: {
+    height: 40,
+    width: 40,
+
+  },
+  socialButtonL: {
+    height: 38,
+    width: 38,
+
   },
 });
 
