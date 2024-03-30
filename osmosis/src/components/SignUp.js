@@ -12,7 +12,7 @@ import SignUpstyles from './styles/appStyles/SignUpstyles';
 
 
 const SignUp = ({navigation}) => {
-  // const navigation = useNavigation();
+  
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
