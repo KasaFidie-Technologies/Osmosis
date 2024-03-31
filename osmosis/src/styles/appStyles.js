@@ -68,7 +68,34 @@ const styles =  StyleSheet.create({
     shortVideo: {
         width: '100%',
         height: "100%"
-    }
+    },
+
+    pigStyles: {
+        marginTop: 50
+    },
+
+    verifyTextSelect: {
+        fontSize: 25,
+        alignSelf: 'flex-start',
+        marginLeft: 10
+    },
+
+    buttonSelectContainer: {
+        width: '100%',
+        marginTop: 20,
+        justifyContent: 'space-evenly',
+        flexDirection: 'row'
+    },
+
+    optionSelectButton:{
+        marginTop: 50,
+        justifyContent: "center",
+        alignItems: "center",
+        height: 50,
+        width: "40%",
+       borderRadius: 15,
+        borderBottomWidth: 5,
+    },
 })
 
 export default styles;
