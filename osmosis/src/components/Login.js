@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Button, Text, TouchableOpacity } from "react-native";
 
-function Login({ navigation }) {
+const Login = ({ navigation }) => {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         
         <TouchableOpacity
-          onPress={() => navigation.navigate('VideoPreview')}
+          onPress={() => navigation.navigate('QuizGame')}
         >
         <Text>Next</Text>
       </TouchableOpacity>

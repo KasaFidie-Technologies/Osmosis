@@ -18,9 +18,12 @@ const styles =  StyleSheet.create({
         fontSize: 30
     },
 
+    whiteTextColor: {
+        color: 'white'
+    },
+
     gradeTxt: {
         fontSize: 20,
-        color: 'white'
     },
 
     gradeButton:{
@@ -29,11 +32,43 @@ const styles =  StyleSheet.create({
         marginTop: 20,
         height: 50,
         width: "80%",
-        borderBottomRightRadius: 15,
-        borderBottomLeftRadius: 15,
+       borderRadius: 15,
         borderBottomWidth: 5,
-    }
+    },
 
+    videoPreviewContainer: {
+        alignItems: 'center',
+        flex: 1,
+    },
+
+    quizTabContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: "100%",
+        height: 150,
+        backgroundColor: '#55A2DA'
+    },
+
+    headerText: {
+        fontSize: 60,
+    },
+
+    subDescription: {
+        fontSize: 20,
+    },
+
+    videoContainer: {
+        width: '100%',
+        height: 300,
+        marginTop: 80,
+        marginBottom: 50,
+        backgroundColor: 'black'
+    },
+
+    shortVideo: {
+        width: '100%',
+        height: "100%"
+    }
 })
 
 export default styles;

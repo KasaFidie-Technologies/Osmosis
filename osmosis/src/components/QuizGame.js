@@ -5,7 +5,6 @@ import { StatusBar } from "expo-status-bar"
 import StudentsImg from "../../assets/students.png"
 import styles from "../styles/appStyles"
 
-
 const buttonData = [
   {
     blueColor: "#66CFDD",
@@ -17,11 +16,15 @@ const buttonData = [
   },
 ]
 
-const QuizGame = ({ navigation }) => {
+const QuizGame = ({ navigation}) => {
   const nums = [];
 
   for(x=1; x<=6; x++){
     nums.push(x)
+  }
+
+  handleGradeButton = () => {
+    navigation.navigate("VideoPreview")
   }
 
     return (
@@ -30,7 +33,8 @@ const QuizGame = ({ navigation }) => {
     <StatusBar hidden/>
       <Image 
       style={styles.studentImg}
-      source={StudentsImg} />
+      source={StudentsImg} 
+      />
 
       <Text style={styles.gradeSelect}>Please select your grade</Text>
 
@@ -70,16 +74,15 @@ const QuizGame = ({ navigation }) => {
 }
 
 const GradeButton = (props) => {
- 
   return(
     <TouchableOpacity style={[styles.gradeButton, 
     {backgroundColor: props.buttonColor},
     {borderBottomColor: props.buttomRadius},
     ]}
-    onPress={() => navigation.navigate('VideoPreview')}
+    onPress={handleGradeButton}
     >
-   
-        <Text style={styles.gradeTxt}>Grade {props.grade}</Text>
+
+        <Text style={[styles.whiteTextColor, styles.gradeTxt]}>Grade {props.grade}</Text>
     </TouchableOpacity>
   )
 }
