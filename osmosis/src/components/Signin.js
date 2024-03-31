@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
     color: "#CBCBCB",
     alignSelf: "center",
     marginBottom: 20,
+    marginTop: 40,
   },
   subtitle: {
     fontSize: 20,
@@ -144,7 +145,7 @@ const styles = StyleSheet.create({
 
   },
   link: {
-    color: "#007bff",
+    color: "#1C0674",
 
 
   },
@@ -164,7 +165,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   forgotPasswordText: {
-    color: '#007bff',
+    color: '#1C0674',
   },
   button: {
     backgroundColor: '#1C0674',
@@ -183,7 +184,7 @@ const styles = StyleSheet.create({
     marginBottom: 68,
     alignItems: 'center',
     position: "absolute",
-    marginTop: 460,
+    marginTop: 500,
     marginLeft: 63,
   },
 

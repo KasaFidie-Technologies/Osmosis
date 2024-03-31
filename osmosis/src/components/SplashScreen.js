@@ -26,7 +26,8 @@ const slides = [
     title: "Easy Manage",
     text: "Lorem ipsum dolor sit amet consectetur. At cursus massa dictum et. Nec semper adipiscing vulputate turpis eget aliquet sit enim tincidunt. Ultrices a netus massa gravida velit justo nisi. Varius nibh nec urna feugiat massa dui.",
     Image: require("../../assets/Component 2.png"),
-    Button: "Next"
+    
+ 
 
   }
 
@@ -35,6 +36,8 @@ const slides = [
 class SplashScreen extends React.Component {
   state = {showHomePage: false}
   _renderItem = ({item}) => {
+
+    const { navigation } = this.props; // Access navigation from props
     return(
       <View style= {{flex: 1}}>
         <Image
@@ -69,21 +72,27 @@ class SplashScreen extends React.Component {
                     }}>
                       { item.text}
                     </Text>
-
-                    <TouchableOpacity 
-                       style= {{
-                        backgroundColor: '#007bff',
-                        padding: 0,
-                        marginLeft: 30,
-                        alignItems: 'center',
-                        borderRadius: 7,
-                        height: 25,
-                        width:80,
-                        alignContent: "right",
-                      }}
-                       onPress={() => navigation.navigate('Signin')}>
-                      {item.Button}
-                    </TouchableOpacity>
+                
+                    {item.key === "three" && (
+        <TouchableOpacity
+        style= {{
+          backgroundColor: '#1C0674',
+          padding: 0,
+          marginTop: 30,
+          marginLeft: 240,
+          alignItems: 'center',
+          borderRadius: 7,
+          height: 25,
+          width:80,
+          alignContent: "right",
+        }}
+        onPress={() => this.props.navigation.navigate('Signin')}>
+        <Text style= {{color: "#fff", fontWeight: "bold"}}>continue</Text>
+        </TouchableOpacity>
+      )}
+             
+                             
+                  
       </View>
   )}
       render() {

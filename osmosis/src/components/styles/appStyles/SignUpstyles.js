@@ -35,10 +35,10 @@ const SignUpstyles = StyleSheet.create({
       width: '80%',
     },
     input: {
-      borderWidth: 1,
+      borderWidth: 2,
       borderColor: '#ccc',
       padding: 10,
-      backgroundColor: "F1F0F0",
+      backgroundColor: "#F1F0F0",
       marginBottom: 15,
       borderRadius: 15,
       fontSize: 17,
@@ -46,7 +46,7 @@ const SignUpstyles = StyleSheet.create({
   
     },
     button: {
-      backgroundColor: '#007bff',
+      backgroundColor: '#1C0674',
       padding: 10,
       alignItems: 'center',
       borderRadius: 13,
@@ -63,7 +63,7 @@ const SignUpstyles = StyleSheet.create({
       color: '#666',
     },
     footerLink: {
-      color: '#007bff',
+      color: '#1C0674',
       marginLeft: 5,
     },
     checkboxContainer: {

@@ -16,9 +16,17 @@ function App() {
   return (
      
    <NavigationContainer>
-     <Stack.Navigator initialRouteName="QuizGame">
-        <Stack.Screen name="SplashScreen" component={SplashScreen} />
-        <Stack.Screen name="Signin" component={Signin} />
+     <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen 
+        name="Splash" 
+        component={SplashScreen} 
+        options={{headerShown: false}}
+        />
+        <Stack.Screen 
+        name="Signin" 
+        component={Signin} 
+        options={{headerShown: false}}
+        />
         <Stack.Screen 
         name="QuizGame" 
         component={QuizGame} 
