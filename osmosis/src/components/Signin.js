@@ -26,7 +26,7 @@ const Signin = ({navigation}) => {
         return;
       }
 
-        navigation.navigate("QuizGame")
+        navigation.navigate("Loading")
       
   };
   const handleSignup = () => {

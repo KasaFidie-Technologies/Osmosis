@@ -76,8 +76,8 @@ const SignUp = ({navigation}) => {
             <View style={[SignUpstyles.checkbox, { backgroundColor: agreeToTerms ? '#007bff' : '#fff' }]} />
           </TouchableOpacity>
           <Text style={SignUpstyles.checkboxLabel}>By checking the box you agree to our 
-             <Text style= {{textdecorationline: "undeline"}}>Terms</Text> and   
-             <Text style= {{textdecorationline: "undeline"}}> Conditions</Text>.
+             <Text>Terms</Text> and   
+             <Text> Conditions</Text>.
           </Text>
         </View>
 
