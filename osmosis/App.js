@@ -9,12 +9,13 @@ import VideoPreview from './src/components/VideoPreview';
 import VerificationScreen from "./src/components/VerificationScreen";
 import SplashScreen from './src/components/SplashScreen';
 import QuizGame from './src/components/QuizGame';
+import Loading from './src/components/Loading';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-     
+    
    <NavigationContainer>
      <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen 
@@ -25,6 +26,11 @@ function App() {
         <Stack.Screen 
         name="Signin" 
         component={Signin} 
+        options={{headerShown: false}}
+        />
+        <Stack.Screen 
+        name="Loading" 
+        component={Loading} 
         options={{headerShown: false}}
         />
         <Stack.Screen 
@@ -44,8 +50,17 @@ function App() {
         options={{headerShown: false}}
         />
 
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="VerificationScreen" component={VerificationScreen} />
+        <Stack.Screen 
+        name="SignUp" 
+        component={SignUp} 
+        options={{headerShown: false}}
+        />
+
+        <Stack.Screen 
+        name="VerificationScreen" 
+        component={VerificationScreen}
+        options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
